@@ -1,0 +1,4 @@
+import { Building2, GraduationCap, HeartPulse, Hotel, Rocket, ShoppingCart, Store, Users } from 'lucide-react';
+import { Reveal } from './Reveal';
+const items=['Small Businesses','Startups','eCommerce Brands','Healthcare','Hospitality','Handicraft Businesses','Educational Institutions','Service-Based Companies']; const icons=[Store,Rocket,ShoppingCart,HeartPulse,Hotel,Building2,GraduationCap,Users];
+export default function Industries(){return <section className="section"><div className="container"><Reveal><h2 className="font-display text-5xl font-bold md:text-7xl">Industries We Serve</h2></Reveal><div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{items.map((it,i)=>{const Icon=icons[i];return <Reveal delay={(i%4)*.04} key={it} className="magnetic-card rounded-3xl p-6"><Icon className="mb-8 text-burner-accent"/><h3 className="font-display text-xl font-bold">{it}</h3></Reveal>})}</div></div></section>}
